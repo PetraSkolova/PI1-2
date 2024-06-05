@@ -1,0 +1,59 @@
+Priklad: 3
+
+import random
+import turtle
+
+t = turtle.Turtle()
+turtle.delay(0)
+
+def slnko(p, v):
+    t.begin_fill()
+    t.color("gold")
+    t.dot(v)
+    t.end_fill()
+    for i in range(p):
+        t.pensize(10)
+        t.begin_fill()
+        t.color("gold")
+        t.fd(v)
+        t.end_fill()
+        t.penup()
+        t.bk(v)
+        t.pendown()
+        t.rt(360/p)
+
+
+slnko(20,100)
+
+
+turtle.mainloop()
+
+
+
+
+Priklad: 4
+
+
+import random
+import turtle
+
+t = turtle.Turtle()
+turtle.delay(0)
+
+def terc(p):
+    d = 15 * p
+    t.dot(d)
+    color1 = "blue"
+    color2 = "yellow"
+    for i in range(p):
+        t.begin_fill()
+        t.color(color1)
+        t.dot(d)
+        t.end_fill()
+        d = d-15
+        color1, color2 = color2, color1
+
+
+terc(25)
+
+turtle.mainloop()
